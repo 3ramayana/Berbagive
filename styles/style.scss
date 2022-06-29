@@ -1,0 +1,146 @@
+@import "./breakpoints";
+
+$white: #fff;
+$yellow: #ffd236;
+$darkGreen: #3ba1ad;
+$mediumGreen: #48afbb;
+$softGreen: #e3fcff;
+$redHeart: #eb2678;
+$orange: #ffa800;
+$mainBlack: #373e3a;
+$secondBlack: #7e8585;
+$thirdBlack: #d9d9d9;
+$green: #4db282;
+$font-weight: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+header {
+  background-image: url("../images/header.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  nav {
+    font-size: 20px;
+    .navbar-nav {
+      .nav-link {
+        padding-right: 20px !important;
+        transition: all 0.3s ease;
+        color: $white;
+        &:hover {
+          color: $yellow;
+        }
+        &.active {
+          color: $yellow;
+          font-weight: map-get($font-weight, bold);
+        }
+      }
+    }
+  }
+}
+.v-line {
+  background-color: $mediumGreen;
+  width: 4px;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  @include lg {
+    display: none;
+  }
+}
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: map-get($font-weight, bold);
+  font-size: 20px;
+}
+.btn-white-outline {
+  @extend .btn;
+  background-color: transparent;
+  border: 2px solid $white;
+  color: $white;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $white;
+    box-shadow: 7px 7px 20px 0px #fff9, 4px 4px 5px 0px #fff9,
+      -7px -7px 20px 0px #0002, -4px -4px 5px 0px #0001;
+  }
+}
+.btn-red {
+  @extend .btn;
+  background-color: $redHeart;
+  color: $white;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $white;
+    box-shadow: 7px 7px 20px 0px $redHeart, 4px 4px 5px 0px $redHeart,
+      -7px -7px 20px 0px #0002, -4px -4px 5px 0px #0001;
+  }
+}
+.btn-green {
+  @extend .btn;
+  background-color: $darkGreen;
+  color: $white;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $white;
+    box-shadow: 7px 7px 20px 0px $darkGreen, 4px 4px 5px 0px $darkGreen,
+      -7px -7px 20px 0px #0002, -4px -4px 5px 0px #0001;
+  }
+}
+.btn-green-outline {
+  @extend .btn;
+  background-color: transparent;
+  border: 2px solid $green;
+  color: $green;
+  display: inline-block;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $green;
+    box-shadow: 7px 7px 20px 0px $green, 4px 4px 5px 0px $green,
+      -7px -7px 20px 0px #0002, -4px -4px 5px 0px #0001;
+  }
+}
+.hero {
+  padding: 50px 0;
+  h1 {
+    color: $white;
+    font-weight: map-get($font-weight, bold);
+    font-size: 64px;
+    @include sm {
+      font-size: 48px;
+    }
+  }
+  h2 {
+    color: $white;
+    font-weight: map-get($font-weight, regular);
+    font-size: 32px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    @include sm {
+      font-size: 28px;
+    }
+  }
+  @include lg {
+    .hero-title {
+      order: 2;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .hero-image {
+      order: 1;
+    }
+  }
+}
+.partner {
+  padding: 50px 0;
+}
