@@ -47,6 +47,9 @@ header {
     }
   }
 }
+main {
+  background-color: $softGreen;
+}
 .v-line {
   background-color: $mediumGreen;
   width: 4px;
@@ -143,4 +146,271 @@ header {
 }
 .partner {
   padding: 50px 0;
+}
+.headline {
+  text-align: center;
+  h1 {
+    color: $mainBlack;
+    font-weight: map-get($font-weight, bold);
+    font-size: 64px;
+    @include sm {
+      font-size: 48px;
+    }
+  }
+  p {
+    color: $secondBlack;
+    font-weight: map-get($font-weight, light);
+    font-size: 20px;
+  }
+}
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  .card-img-top {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 243px;
+    background-color: $yellow;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+    .date {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgba($color: $redHeart, $alpha: 0.6);
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: $white;
+      .date-day {
+        font-weight: map-get($font-weight, medium);
+      }
+      .date-month {
+        font-weight: map-get($font-weight, medium);
+      }
+    }
+  }
+  .tag {
+    font-style: italic;
+    span {
+      font-weight: map-get($font-weight, regular);
+    }
+  }
+  .card-body {
+    padding-left: 0;
+    padding-right: 0;
+    .card-title {
+      font-weight: map-get($font-weight, bold);
+      font-size: 20px;
+      color: $mainBlack;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-title-link {
+      transition: all 0.3s ease;
+      @extend .card-title;
+      &:hover {
+        color: $yellow;
+      }
+    }
+    .card-text {
+      font-weight: map-get($font-weight, regular);
+      font-size: 16px;
+      color: $secondBlack;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .card-goal {
+    margin-bottom: 30px;
+    .goal-text {
+      display: flex;
+      justify-content: space-between;
+      p {
+        display: inline-block;
+        margin-bottom: 11px;
+        font-weight: map-get($font-weight, bold);
+        font-size: 24px;
+        &.goal-text-start {
+          color: $secondBlack;
+        }
+        &.goal-text-end {
+          color: $mainBlack;
+        }
+      }
+    }
+  }
+  .goal-progress {
+    background-color: $thirdBlack;
+    height: 10px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-start;
+    .goal-progress-value {
+      background-color: $yellow;
+      height: 10px;
+      border-radius: 100px;
+      &.one-progress {
+        width: 9%;
+      }
+      &.two-progress {
+        width: 15%;
+      }
+      &.third-progress {
+        width: 87%;
+      }
+      &.four-progress {
+        width: 87%;
+      }
+      &.five-progress {
+        width: 5%;
+      }
+      &.six-progress {
+        width: 59%;
+      }
+    }
+  }
+}
+.testimonial {
+  padding: 30px;
+  background-color: $white;
+  border-radius: 20px;
+  color: $secondBlack;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  .body-text {
+    margin-bottom: 30px;
+    font-weight: map-get($font-weight, regular);
+    font-size: 16px;
+  }
+  .testimonial-footer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    img {
+      width: 63px;
+      border-radius: 100%;
+    }
+    .footer-text {
+      .job-name {
+        color: $orange;
+        font-weight: map-get($font-weight, medium);
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .job-position {
+        font-weight: map-get($font-weight, regular);
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.news {
+  background-color: $darkGreen;
+}
+.quote {
+  background-color: $darkGreen;
+  .quote-card {
+    background-color: $softGreen;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      &.bg {
+        top: -50%;
+        right: -20%;
+        width: 70%;
+        @include md {
+          display: none;
+        }
+      }
+      &.ceo {
+        bottom: -10px;
+        right: 0;
+        @include md {
+          display: none;
+        }
+      }
+    }
+    span {
+      font-weight: map-get($font-weight, light);
+      font-size: 20px;
+      color: $darkGreen;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: map-get($font-weight, bold);
+      font-size: 40px;
+      color: $mainBlack;
+      margin-bottom: 27px;
+      z-index: 1;
+      position: relative;
+    }
+    .quote-text {
+      display: flex;
+      margin-bottom: 32px;
+      position: relative;
+      i {
+        color: $darkGreen;
+      }
+      p {
+        font-weight: map-get($font-weight, regular);
+        font-style: italic;
+        font-size: 32px;
+        color: $mainBlack;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+footer {
+  background-color: $darkGreen;
+  color: $white;
+  font-weight: map-get($font-weight, regular);
+  font-size: 20px;
+  a {
+    color: $white;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  .footer-title {
+    font-weight: map-get($font-weight, regular);
+    font-size: 32px;
+  }
+  .footer-link {
+    display: block;
+  }
+  .social-media {
+    display: flex;
+    gap: 15px;
+  }
+  .hr {
+    height: 4px;
+    background-color: $mediumGreen;
+    border-radius: 100px;
+    margin-bottom: 25px;
+  }
+  .policy {
+    text-align: right;
+    @include lg {
+      text-align: left;
+    }
+  }
 }
