@@ -4,6 +4,7 @@ a {
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: #3ba1ad;
 }
 
 header {
@@ -275,41 +276,44 @@ main {
   width: 59%;
 }
 
-.testimonial {
+.testimonials {
+  padding-bottom: 350px;
+}
+.testimonials .testimonial {
   padding: 30px;
   background-color: #fff;
   border-radius: 20px;
   color: #7e8585;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
-.testimonial .body-text {
+.testimonials .testimonial .body-text {
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
 }
-.testimonial .testimonial-footer {
+.testimonials .testimonial .testimonial-footer {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.testimonial .testimonial-footer img {
+.testimonials .testimonial .testimonial-footer img {
   width: 63px;
   border-radius: 100%;
 }
-.testimonial .testimonial-footer .footer-text .job-name {
+.testimonials .testimonial .testimonial-footer .footer-text .job-name {
   color: #ffa800;
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 5px;
 }
-.testimonial .testimonial-footer .footer-text .job-position {
+.testimonials .testimonial .testimonial-footer .footer-text .job-position {
   font-weight: 400;
   font-style: italic;
   font-size: 14px;
 }
 
 .news {
-  background-color: #3ba1ad;
+  margin-top: -400px;
 }
 
 .quote {

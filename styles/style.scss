@@ -23,6 +23,7 @@ a {
 }
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: $darkGreen;
 }
 header {
   background-image: url("../images/header.svg");
@@ -283,42 +284,46 @@ main {
     }
   }
 }
-.testimonial {
-  padding: 30px;
-  background-color: $white;
-  border-radius: 20px;
-  color: $secondBlack;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  .body-text {
-    margin-bottom: 30px;
-    font-weight: map-get($font-weight, regular);
-    font-size: 16px;
-  }
-  .testimonial-footer {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    img {
-      width: 63px;
-      border-radius: 100%;
+.testimonials {
+  padding-bottom: 350px;
+  .testimonial {
+    padding: 30px;
+    background-color: $white;
+    border-radius: 20px;
+    color: $secondBlack;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    .body-text {
+      margin-bottom: 30px;
+      font-weight: map-get($font-weight, regular);
+      font-size: 16px;
     }
-    .footer-text {
-      .job-name {
-        color: $orange;
-        font-weight: map-get($font-weight, medium);
-        font-size: 16px;
-        margin-bottom: 5px;
+    .testimonial-footer {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      img {
+        width: 63px;
+        border-radius: 100%;
       }
-      .job-position {
-        font-weight: map-get($font-weight, regular);
-        font-style: italic;
-        font-size: 14px;
+      .footer-text {
+        .job-name {
+          color: $orange;
+          font-weight: map-get($font-weight, medium);
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .job-position {
+          font-weight: map-get($font-weight, regular);
+          font-style: italic;
+          font-size: 14px;
+        }
       }
     }
   }
 }
 .news {
-  background-color: $darkGreen;
+  // background-color: $darkGreen;
+  margin-top: -400px;
 }
 .quote {
   background-color: $darkGreen;
